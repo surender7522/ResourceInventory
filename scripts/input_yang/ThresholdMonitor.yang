@@ -1,0 +1,62 @@
+module ThresholdMonitor {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "ThresholdMonitor";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "ThresholdMonitor generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "ThresholdMonitor Attributes";
+    leaf thmonMonitorGranularityPeriod {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf thmonObjectInstances {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf thmonRootObjectInstances {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "ThresholdInfo";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

@@ -1,0 +1,190 @@
+module NetworkService {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "NetworkService";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Service" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "NetworkService generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "NetworkService Attributes";
+    leaf nsSubType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsCreatorid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsDayoneconfigstatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsOssparameterstatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsUpgraded {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsSwversion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsEmsstatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsDecommission {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsIpv4 {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsIpv6 {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsTechnology {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsPreswversion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsNse2eoreferenceid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssubType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsDescriptorName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsDescriptorId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsDescriptorVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nsNFVOName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslIsSliceAware {
+      type int64;
+      description "";
+      mandatory  "false";
+      default 0;
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "VNF_R";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_1 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "CNF";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_2 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "LogicalLink";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_3 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "NetworkElement";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_4 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "NetworkService";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

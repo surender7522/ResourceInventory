@@ -1,0 +1,44 @@
+module NELocation {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "NELocation";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GeoLocation" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "NELocation generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "NELocation Attributes";
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "NetworkElement";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

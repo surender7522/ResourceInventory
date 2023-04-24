@@ -1,0 +1,156 @@
+module CNF {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "CNF";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "VNF" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "CNF generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "CNF Attributes";
+    leaf cnfNfUid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfdName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfAppClusterid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfNodeid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfNvnodes {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfSequenceNumber {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfENBId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfDay1Status {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfE2EOClusterRegistrationId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfDescriptorId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfDescriptorName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfDescriptorVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfTenantId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfTenantName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfUtime {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfIPSubnet {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "Bundle";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf connects_0 {
+      type Base:relatedType { 
+        Base:relationship "connects";
+        Base:relType "CNF";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "CNFC";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

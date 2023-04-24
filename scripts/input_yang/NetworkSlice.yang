@@ -1,0 +1,106 @@
+module NetworkSlice {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "NetworkSlice";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Service" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "NetworkSlice generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "NetworkSlice Attributes";
+    leaf nslDescriptorId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslDecriptorId {
+      type string;
+      description "Deprecated, replaced by nslDescriptorId";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslDescriptorName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslDescriptorVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslTemplateId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslTemplateName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslTemplateVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslLCMTrackerId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nslRRMPolicyMinRatio {
+      type int32;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "ServiceProfile";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "NetworkSliceSubnet";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

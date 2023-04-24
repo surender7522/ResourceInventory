@@ -1,0 +1,188 @@
+module DCPod {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "DCPod";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "LogicalResource" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "DCPod generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "DCPod Attributes";
+    leaf dcPodAZName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcAzname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcRegionname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcFloornumber {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcRoomname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPodname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcNsostatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcOpenstackip {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcOpenstackversion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcUsername {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPassword {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcNUMANumber {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPodSetup {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcManagedbynfvo {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcManagedbyvnfm {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcIpaddress {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPodcode {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcCvimip {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcOpenstackid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPodcompositiontype {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPodipDetail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPodagDetail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcPrimaryInstanceNumber {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcSecondaryInstanceNumber {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf uses_0 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "Fabric";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

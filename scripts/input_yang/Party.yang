@@ -1,0 +1,36 @@
+module Party {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "Party";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Entity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "Party generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "Party Attributes";
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

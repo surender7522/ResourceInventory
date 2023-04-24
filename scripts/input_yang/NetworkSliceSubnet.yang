@@ -1,0 +1,130 @@
+module NetworkSliceSubnet {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "NetworkSliceSubnet";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "NetworkSliceSubnet generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "NetworkSliceSubnet Attributes";
+    leaf nssDescriptorId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssDecriptorId {
+      type string;
+      description "Deprecated, left for compatibility";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssDescriptorName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssDescriptorVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssTemplateId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssTemplateName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssTemplateVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssLCMTrackerId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf nssRanCapacity {
+      type int32;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "SliceProfile";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_1 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "PerfMetricJob";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_2 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "ThresholdMonitor";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_3 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "NetworkService";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "NetworkSliceSubnet";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

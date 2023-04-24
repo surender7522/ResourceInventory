@@ -1,0 +1,46 @@
+module Base {
+    namespace "http://example.net/network/Base";
+    prefix "Base";
+
+    extension source {
+        argument name;
+        description "The originator of the model";
+    }
+    extension baseType {
+        argument name;
+        description "The parent class of this class";
+    }
+    extension version {
+        argument name;
+        description "The version of the model";
+    }
+    extension onVertex {
+        argument name;
+        description "Defined which parameter is onVertex or not";
+    }
+
+    typedef relatedType {
+        type string;
+        description "Defines a related entity type";
+    }
+    extension relType {
+        argument name;
+        description "The class of the other end of a relationship";
+    }
+    extension relationship  {
+        argument name;
+        description "The type of relationship";
+    }
+    typedef index {
+        type string;
+        description "Defines an index and uniqueness constraint.";
+    }
+    extension indexFields {
+        argument name;
+        description "Comma separated list of fields for indexing";
+    }
+    extension unique {
+        argument name;
+        description "true if combinination of field values is to be unique";
+    }
+}

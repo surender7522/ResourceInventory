@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="ClusterRole"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:ClusterRole="http://rakuten.com/RCP/network"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://rakuten.com/RCP/network"/>
+  <prefix value="ClusterRole"/>
+  <import module="Base">
+    <prefix value="Base"/>
+  </import>
+  <Base:source name="RCP-Base"/>
+  <Base:version name="1.0"/>
+  <Base:baseType name="Role">
+    <Base:source name="RCP-Base"/>
+    <Base:version name="1.0"/>
+  </Base:baseType>
+  <organization>
+    <text>Rakuten</text>
+  </organization>
+  <contact>
+    <text></text>
+  </contact>
+  <description>
+    <text>ClusterRole generated from puml</text>
+  </description>
+  <revision date="2020-08-20">
+    <description>
+      <text>Initial Version</text>
+    </description>
+    <reference>
+      <text></text>
+    </reference>
+  </revision>
+  <container name="attributes">
+    <description>
+      <text>ClusterRole Attributes</text>
+    </description>
+    <leaf name="hostType">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+  </container>
+  <container name="relationships">
+    <description>
+      <text>Relationship definitions</text>
+    </description>
+    <leaf name="has_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="has"/>
+        <Base:relType name="Server"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+  </container>
+</module>

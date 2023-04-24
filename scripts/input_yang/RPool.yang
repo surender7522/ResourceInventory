@@ -1,0 +1,128 @@
+module RPool {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "RPool";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "RPool generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "RPool Attributes";
+    leaf rpRangeStart {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpRangeEnd {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpPrefix {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpHosts {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpTotalGPUCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpTotalCPUCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpTotalMemGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpTotalHDDGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpTotalSSDGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpFreeGPUCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpFreeCPUCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpFreeMemGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpFreeHDDGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rpFreeSSDGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "Server";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

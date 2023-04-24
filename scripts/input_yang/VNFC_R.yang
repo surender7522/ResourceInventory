@@ -1,0 +1,74 @@
+module VNFC_R {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "VNFC_R";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "VNFC" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "VNFC_R generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "VNFC_R Attributes";
+    leaf vnfcInstanceId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfcrIPPool {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfcResourcePool {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf cnfcrBundleId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfcrLabels {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "K8_Service";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

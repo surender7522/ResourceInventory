@@ -1,0 +1,104 @@
+module VNF {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "VNF";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "ManagedEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "VNF generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "VNF Attributes";
+    leaf vnfLicense {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfInstantiationlevel {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfUsername {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfChecksum {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfManagedbyvnfm {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfSwversionstatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfRPoolName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfIPPoolName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfStatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vnfType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "VNFC";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

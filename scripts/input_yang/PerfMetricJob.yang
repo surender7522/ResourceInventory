@@ -1,0 +1,84 @@
+module PerfMetricJob {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "PerfMetricJob";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "PerfMetricJob generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "PerfMetricJob Attributes";
+    leaf pmjobPerfMetricJobGroupId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobPerformanceMetrics {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobGranularityPeriod {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobObjectInstances {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobRootObjectInstances {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobFileReportingPeriod {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobFileLocation {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf pmjobStreamTarget {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

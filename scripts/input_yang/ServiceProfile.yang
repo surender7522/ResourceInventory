@@ -1,0 +1,426 @@
+module ServiceProfile {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "ServiceProfile";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "ServiceProfile generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "ServiceProfile Attributes";
+    leaf svcpmaxNumberofUEs {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpcoverageArea {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcplatency {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpuEMobilityLevel {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpresourceSharingLevel {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpavailability {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxNumOfConnsCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxNumOfConnsTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxNumOfConnsExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxNumOfConnsNoOfConns {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpKPIMonitoringCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpKPIMonitoringTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpKPIMonitoringExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpKPIMonitoringKPIList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpSATCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpSATTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpSATExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpSATAccessTechList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDTCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDTTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDTExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDTSupport {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDCCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDCTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDCExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDCAvailability {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDCPeriodicityList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSCategoryPerSlice {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPStaggingPerSlice {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSexposurePerSlice {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSGuaThptPerSlice {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSMaxThptPerSlice {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSCategoryPerUE {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSTaggingPerUE {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSExposurePerUE {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSGuaThptPerUE {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpDLTPSMaxThptPerUE {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPSCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPSTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPSExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPSGuaThpt {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPSMaxThpt {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPUCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPUTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPUExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPUGuaThpt {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpULTPUMaxThpt {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMAXPKSCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMAXPKSTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMAXPKSExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMAXPKSMaxSize {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxPDUSCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxPDUSTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpMaxPDUSExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpTDCategory {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpTDTagging {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpTDExposure {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpTDDensity {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpactivityFactor {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpuESpeed {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpjitter {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpsurvivalTime {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpreliability {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpmaxDLDataVolume {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svcpmaxULDataVolume {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

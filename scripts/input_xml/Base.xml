@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="Base"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://example.net/network/Base"/>
+  <prefix value="Base"/>
+  <extension name="source">
+    <argument name="name"/>
+    <description>
+      <text>The originator of the model</text>
+    </description>
+  </extension>
+  <extension name="baseType">
+    <argument name="name"/>
+    <description>
+      <text>The parent class of this class</text>
+    </description>
+  </extension>
+  <extension name="version">
+    <argument name="name"/>
+    <description>
+      <text>The version of the model</text>
+    </description>
+  </extension>
+  <extension name="onVertex">
+    <argument name="name"/>
+    <description>
+      <text>Defined which parameter is onVertex or not</text>
+    </description>
+  </extension>
+  <typedef name="relatedType">
+    <type name="string"/>
+    <description>
+      <text>Defines a related entity type</text>
+    </description>
+  </typedef>
+  <extension name="relType">
+    <argument name="name"/>
+    <description>
+      <text>The class of the other end of a relationship</text>
+    </description>
+  </extension>
+  <extension name="relationship">
+    <argument name="name"/>
+    <description>
+      <text>The type of relationship</text>
+    </description>
+  </extension>
+  <typedef name="index">
+    <type name="string"/>
+    <description>
+      <text>Defines an index and uniqueness constraint.</text>
+    </description>
+  </typedef>
+  <extension name="indexFields">
+    <argument name="name"/>
+    <description>
+      <text>Comma separated list of fields for indexing</text>
+    </description>
+  </extension>
+  <extension name="unique">
+    <argument name="name"/>
+    <description>
+      <text>true if combinination of field values is to be unique</text>
+    </description>
+  </extension>
+</module>

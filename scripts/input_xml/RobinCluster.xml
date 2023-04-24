@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="RobinCluster"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:RobinCluster="http://rakuten.com/RCP/network"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://rakuten.com/RCP/network"/>
+  <prefix value="RobinCluster"/>
+  <import module="Base">
+    <prefix value="Base"/>
+  </import>
+  <Base:source name="RCP-Base"/>
+  <Base:version name="1.0"/>
+  <Base:baseType name="Cluster">
+    <Base:source name="RCP-Base"/>
+    <Base:version name="1.0"/>
+  </Base:baseType>
+  <organization>
+    <text>Rakuten</text>
+  </organization>
+  <contact>
+    <text></text>
+  </contact>
+  <description>
+    <text>RobinCluster generated from puml</text>
+  </description>
+  <revision date="2020-08-20">
+    <description>
+      <text>Initial Version</text>
+    </description>
+    <reference>
+      <text></text>
+    </reference>
+  </revision>
+  <container name="attributes">
+    <description>
+      <text>RobinCluster Attributes</text>
+    </description>
+    <leaf name="rcClusterId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcVRId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcMgmtIPV4">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcMgmtIPV6">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcServiceIP">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcE2EOUUID">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcClusterNumber">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcBuildVersion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcCalicoIP">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcBMaaSUUID">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcApplicationTag">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcConfigVersion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcRobinVIP">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcRobinVersion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcInstallType">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcZonceID">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcHealth">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcDataCenterType">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcDataCenterId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcCPUAvail">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcMemoryAvail">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="rcStorageAvail">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+  </container>
+  <container name="relationships">
+    <description>
+      <text>Relationship definitions</text>
+    </description>
+    <leaf name="uses_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="uses"/>
+        <Base:relType name="Fabric"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="uses_1">
+      <type name="Base:relatedType">
+        <Base:relationship name="uses"/>
+        <Base:relType name="ClusterVLAN"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="Server"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_1">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="VNF_R"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_2">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="CNF"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="has_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="has"/>
+        <Base:relType name="IPPool"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="has_1">
+      <type name="Base:relatedType">
+        <Base:relationship name="has"/>
+        <Base:relType name="Tenant"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="has_2">
+      <type name="Base:relatedType">
+        <Base:relationship name="has"/>
+        <Base:relType name="RPool"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="has_3">
+      <type name="Base:relatedType">
+        <Base:relationship name="has"/>
+        <Base:relType name="User"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="has_4">
+      <type name="Base:relatedType">
+        <Base:relationship name="has"/>
+        <Base:relType name="ClusterRole"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+  </container>
+</module>

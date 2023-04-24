@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="DCPod"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:DCPod="http://rakuten.com/RCP/network"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://rakuten.com/RCP/network"/>
+  <prefix value="DCPod"/>
+  <import module="Base">
+    <prefix value="Base"/>
+  </import>
+  <Base:source name="RCP-Base"/>
+  <Base:version name="1.0"/>
+  <Base:baseType name="LogicalResource">
+    <Base:source name="RCP-Base"/>
+    <Base:version name="1.0"/>
+  </Base:baseType>
+  <organization>
+    <text>Rakuten</text>
+  </organization>
+  <contact>
+    <text></text>
+  </contact>
+  <description>
+    <text>DCPod generated from puml</text>
+  </description>
+  <revision date="2020-08-20">
+    <description>
+      <text>Initial Version</text>
+    </description>
+    <reference>
+      <text></text>
+    </reference>
+  </revision>
+  <container name="attributes">
+    <description>
+      <text>DCPod Attributes</text>
+    </description>
+    <leaf name="dcPodAZName">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcAzname">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcRegionname">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcFloornumber">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcRoomname">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPodname">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcNsostatus">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcOpenstackip">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcOpenstackversion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcUsername">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPassword">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcNUMANumber">
+      <type name="int64"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPodSetup">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcManagedbynfvo">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcManagedbyvnfm">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcIpaddress">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPodcode">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcCvimip">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcOpenstackid">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPodcompositiontype">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPodipDetail">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPodagDetail">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcPrimaryInstanceNumber">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcSecondaryInstanceNumber">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+  </container>
+  <container name="relationships">
+    <description>
+      <text>Relationship definitions</text>
+    </description>
+    <leaf name="uses_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="uses"/>
+        <Base:relType name="Fabric"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+  </container>
+</module>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="K8_POD"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:K8_POD="http://rakuten.com/RCP/network"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://rakuten.com/RCP/network"/>
+  <prefix value="K8_POD"/>
+  <import module="Base">
+    <prefix value="Base"/>
+  </import>
+  <Base:source name="RCP-Base"/>
+  <Base:version name="1.0"/>
+  <Base:baseType name="LogicalResource">
+    <Base:source name="RCP-Base"/>
+    <Base:version name="1.0"/>
+  </Base:baseType>
+  <organization>
+    <text>Rakuten</text>
+  </organization>
+  <contact>
+    <text></text>
+  </contact>
+  <description>
+    <text>K8_POD generated from puml</text>
+  </description>
+  <revision date="2020-08-20">
+    <description>
+      <text>Initial Version</text>
+    </description>
+    <reference>
+      <text></text>
+    </reference>
+  </revision>
+  <container name="attributes">
+    <description>
+      <text>K8_POD Attributes</text>
+    </description>
+    <leaf name="k8pod_clusterId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="k8pod_nodehostname">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="k8podCtime">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="k8podUtime">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="k8podMemory">
+      <type name="int64"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="k8podCpuCores">
+      <type name="int64"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+  </container>
+  <container name="relationships">
+    <description>
+      <text>Relationship definitions</text>
+    </description>
+    <leaf name="contains_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="PODInterface"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+  </container>
+</module>

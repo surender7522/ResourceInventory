@@ -1,0 +1,90 @@
+module PODInterface {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "PODInterface";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "LogicalInterface" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "PODInterface generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "PODInterface Attributes";
+    leaf podiDriver {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiAddress {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiIPVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiNetmask {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiIPPool {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiVLAN {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiBridge {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiSriovNics {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf podiSubnet {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

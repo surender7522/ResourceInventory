@@ -1,0 +1,126 @@
+module Bundle {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "Bundle";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "Bundle generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "Bundle Attributes";
+    leaf bndType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndBundlepath {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndCollectionname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndBundlesize {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndUsername {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndBundlename {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndBudlefilename {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndResourceurl {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndResourceid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndBundleid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndRegistry {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndContentid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndSource {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf bndImageprefix {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

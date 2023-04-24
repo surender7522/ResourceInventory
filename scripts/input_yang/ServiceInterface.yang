@@ -1,0 +1,54 @@
+module ServiceInterface {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "ServiceInterface";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "LogicalInterface" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "ServiceInterface generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "ServiceInterface Attributes";
+    leaf svciProtocol {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svciPortNum {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svciTargetPort {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

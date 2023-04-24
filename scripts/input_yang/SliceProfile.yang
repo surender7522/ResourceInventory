@@ -1,0 +1,86 @@
+module SliceProfile {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "SliceProfile";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "SliceProfile generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "SliceProfile Attributes";
+    leaf sprofSNSSAIList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf sprofPLMNIdList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf sprofMaxNumberofUEs {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf sprofCoverageAreaTAList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf sprofLatency {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf sprofUEMobilityLevel {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf sprofResourceSharingLevel {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "PerfReq";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

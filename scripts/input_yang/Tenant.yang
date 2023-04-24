@@ -1,0 +1,114 @@
+module Tenant {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "Tenant";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Party" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "Tenant generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "Tenant Attributes";
+    leaf tntDefaultIPPool {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntIPPools {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntRPools {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntDefaultIPpool {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntLimitGPUCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntLimitCPUCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntLimitMemGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntLimitHDDGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf tntLimitSSDGB {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf uses_0 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "RPool";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf uses_1 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "IPPool";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "User";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

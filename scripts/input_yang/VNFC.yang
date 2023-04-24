@@ -1,0 +1,36 @@
+module VNFC {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "VNFC";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "ManagedEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "VNFC generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "VNFC Attributes";
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

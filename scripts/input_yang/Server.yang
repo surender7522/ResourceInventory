@@ -1,0 +1,286 @@
+module Server {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "Server";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "ManagedEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "Server generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "Server Attributes";
+    leaf svrSledNo {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrMACAddress {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrRobinVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFPGAVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrKernelVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrEMSId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrClusterRole {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrChassisNo {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrBMCVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrBMCHost {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrRAIDVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrNICVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrSSDVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrPhysicalHostName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrOSName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrNodeElementId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrClusterPodId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrNootTime {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf srvCPUTotal {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrCPUUsed {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrMemTotalMb {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrMemUsedMb {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrStorageTotalGb {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrStorageUsedGb {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrSKUType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorOS {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorVDU {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorSRIOV {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorVCU {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorFWUP {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorNICDdriver {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrRcpVer {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrRcpRev {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrRcpWorkload {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrDomain {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrDNS {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrNTP {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrGateWay {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf svrFlavorNICDippDriver {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf runsin_0 {
+      type Base:relatedType { 
+        Base:relationship "runsin";
+        Base:relType "K8_POD";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf uses_0 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "VLANInterface";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

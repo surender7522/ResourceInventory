@@ -1,0 +1,50 @@
+module GeoSubLocation {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "GeoSubLocation";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Location" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "GeoSubLocation generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "GeoSubLocation Attributes";
+    leaf gslType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf locates_0 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "GeoSubLocation";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

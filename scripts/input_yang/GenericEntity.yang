@@ -1,0 +1,36 @@
+module GenericEntity {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "GenericEntity";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Entity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "GenericEntity generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "GenericEntity Attributes";
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

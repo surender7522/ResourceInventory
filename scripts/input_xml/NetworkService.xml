@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="NetworkService"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:NetworkService="http://rakuten.com/RCP/network"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://rakuten.com/RCP/network"/>
+  <prefix value="NetworkService"/>
+  <import module="Base">
+    <prefix value="Base"/>
+  </import>
+  <Base:source name="RCP-Base"/>
+  <Base:version name="1.0"/>
+  <Base:baseType name="Service">
+    <Base:source name="RCP-Base"/>
+    <Base:version name="1.0"/>
+  </Base:baseType>
+  <organization>
+    <text>Rakuten</text>
+  </organization>
+  <contact>
+    <text></text>
+  </contact>
+  <description>
+    <text>NetworkService generated from puml</text>
+  </description>
+  <revision date="2020-08-20">
+    <description>
+      <text>Initial Version</text>
+    </description>
+    <reference>
+      <text></text>
+    </reference>
+  </revision>
+  <container name="attributes">
+    <description>
+      <text>NetworkService Attributes</text>
+    </description>
+    <leaf name="nsSubType">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsCreatorid">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsDayoneconfigstatus">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsOssparameterstatus">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsUpgraded">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsSwversion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsEmsstatus">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsDecommission">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsIpv4">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsIpv6">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsTechnology">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsPreswversion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsNse2eoreferenceid">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nssubType">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsDescriptorName">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsDescriptorId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsDescriptorVersion">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nsNFVOName">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="nslIsSliceAware">
+      <type name="int64"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value="0"/>
+    </leaf>
+  </container>
+  <container name="relationships">
+    <description>
+      <text>Relationship definitions</text>
+    </description>
+    <leaf name="contains_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="VNF_R"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_1">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="CNF"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_2">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="LogicalLink"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_3">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="NetworkElement"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="contains_4">
+      <type name="Base:relatedType">
+        <Base:relationship name="contains"/>
+        <Base:relType name="NetworkService"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+  </container>
+</module>

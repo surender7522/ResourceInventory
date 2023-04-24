@@ -1,0 +1,48 @@
+module ClusterVLAN {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "ClusterVLAN";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "VLAN" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "ClusterVLAN generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "ClusterVLAN Attributes";
+    leaf clvlanInterface {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf clvlanHost {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

@@ -1,0 +1,72 @@
+module User {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "User";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Party" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "User generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "User Attributes";
+    leaf usrFirstname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf usrLastname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf usrName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf usrRoleForTenant {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf usrPassword {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf usrTenantList {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

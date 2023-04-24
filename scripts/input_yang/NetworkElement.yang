@@ -1,0 +1,88 @@
+module NetworkElement {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "NetworkElement";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "ManagedEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "NetworkElement generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "NetworkElement Attributes";
+    leaf neID {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf neMACAddress {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf neSerialNum {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf neGenerationType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf neModel {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf neIPDetail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf uses_0 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "Connection";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "LogicalInterface";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

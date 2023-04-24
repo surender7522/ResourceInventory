@@ -1,0 +1,100 @@
+module Connection {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "Connection";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Entity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "Connection generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "Connection Attributes";
+    leaf connSrcLogicalPort {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connDestLogicalPort {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connSrcEname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connDestEname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connSrcPort {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connDestPort {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connLinkId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf connMedium {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf uses_0 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "LogicalInterface";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf uses_1 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "Connection";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

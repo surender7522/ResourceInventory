@@ -1,0 +1,104 @@
+module IPPool {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "IPPool";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "IPPool generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "IPPool Attributes";
+    leaf ippRanges {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf ippPrefix {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf ippVLAN {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf ippsubnet {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf ippDriver {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf ippGateway {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf ippVFDriver {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf availableipscount {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf usedipscount {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf totalipscount {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "Server";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

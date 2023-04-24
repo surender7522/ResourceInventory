@@ -1,0 +1,58 @@
+module BundleClusterMapping {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "BundleClusterMapping";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "BundleClusterMapping generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "BundleClusterMapping Attributes";
+    leaf bundleClusterId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "Bundle";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_1 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "RobinCluster";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

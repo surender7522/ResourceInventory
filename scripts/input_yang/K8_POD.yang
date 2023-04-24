@@ -1,0 +1,80 @@
+module K8_POD {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "K8_POD";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "LogicalResource" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "K8_POD generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "K8_POD Attributes";
+    leaf k8pod_clusterId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf k8pod_nodehostname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf k8podCtime {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf k8podUtime {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf k8podMemory {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf k8podCpuCores {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "PODInterface";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

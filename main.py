@@ -9,6 +9,10 @@ from starlette_exporter import PrometheusMiddleware, handle_metrics
 from controllers.model_controller import model_router
 from controllers.resource_controller import resource_router
 import logger
+from services.graph_service import hot_constraints
+
+hot_constraints()
+
 app = FastAPI(title="Resource Inventory",docs_url=None, redoc_url=None)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -19,7 +23,6 @@ app.add_middleware(PrometheusMiddleware)
 app.add_route("/metrics", handle_metrics)
 logger.initialize()
 logger.logger.info("Starting app...")
-
 
 @app.get("/docs", include_in_schema=False)
 async def custom_swagger_ui_html():

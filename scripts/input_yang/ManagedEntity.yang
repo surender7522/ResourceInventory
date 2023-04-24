@@ -1,0 +1,156 @@
+module ManagedEntity {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "ManagedEntity";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "LogicalResource" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "ManagedEntity generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "ManagedEntity Attributes";
+    leaf meHostname {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf mePhysicalhostName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meNeId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meFMEMSId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf mePMEMSId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meCMEMDId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meSubType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meSwVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meBuildVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meLicense {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meState {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meEMSstatus {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meMgmtIPV4 {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meMgmtIPV6 {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meFQDN {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meStage {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meSecured {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meOnAirDate {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meTechnology {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf meRole {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="DC"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:DC="http://rakuten.com/RCP/network"
+        xmlns:Base="http://example.net/network/Base">
+  <namespace uri="http://rakuten.com/RCP/network"/>
+  <prefix value="DC"/>
+  <import module="Base">
+    <prefix value="Base"/>
+  </import>
+  <Base:source name="RCP-Base"/>
+  <Base:version name="1.0"/>
+  <Base:baseType name="GeoLocation">
+    <Base:source name="RCP-Base"/>
+    <Base:version name="1.0"/>
+  </Base:baseType>
+  <organization>
+    <text>Rakuten</text>
+  </organization>
+  <contact>
+    <text></text>
+  </contact>
+  <description>
+    <text>DC generated from puml</text>
+  </description>
+  <revision date="2020-08-20">
+    <description>
+      <text>Initial Version</text>
+    </description>
+    <reference>
+      <text></text>
+    </reference>
+  </revision>
+  <container name="attributes">
+    <description>
+      <text>DC Attributes</text>
+    </description>
+    <leaf name="dcMRing">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcGCRing">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcLRing">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcJapanRing">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcSiteId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcFloors">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcSBlock">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcDNS">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcIpDetail">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+    <leaf name="dcId">
+      <type name="string"/>
+      <description>
+        <text></text>
+      </description>
+      <mandatory value="false"/>
+      <default value=""/>
+    </leaf>
+  </container>
+  <container name="relationships">
+    <description>
+      <text>Relationship definitions</text>
+    </description>
+    <leaf name="locates_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="Fabric"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_1">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="DCPod"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_2">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="CNF"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_3">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="CNFC"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_4">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="VNF"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_5">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="VNF_R"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_6">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="VNFC_R"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_7">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="Router"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_8">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="WDM"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_9">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="Switch"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_10">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="Server"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="locates_11">
+      <type name="Base:relatedType">
+        <Base:relationship name="locates"/>
+        <Base:relType name="RobinCluster"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="connects_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="connects"/>
+        <Base:relType name="DC"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="backup_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="backup"/>
+        <Base:relType name="DC"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+    <leaf name="parent_0">
+      <type name="Base:relatedType">
+        <Base:relationship name="parent"/>
+        <Base:relType name="DC"/>
+        <Base:source name="RCP-Base"/>
+        <Base:version name="1.0"/>
+      </type>
+    </leaf>
+  </container>
+</module>

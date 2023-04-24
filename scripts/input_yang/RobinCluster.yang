@@ -1,0 +1,248 @@
+module RobinCluster {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "RobinCluster";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Cluster" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "RobinCluster generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "RobinCluster Attributes";
+    leaf rcClusterId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcVRId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcMgmtIPV4 {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcMgmtIPV6 {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcServiceIP {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcE2EOUUID {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcClusterNumber {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcBuildVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcCalicoIP {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcBMaaSUUID {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcApplicationTag {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcConfigVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcRobinVIP {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcRobinVersion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcInstallType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcZonceID {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcHealth {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcDataCenterType {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcDataCenterId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcCPUAvail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcMemoryAvail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf rcStorageAvail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf uses_0 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "Fabric";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf uses_1 {
+      type Base:relatedType { 
+        Base:relationship "uses";
+        Base:relType "ClusterVLAN";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_0 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "Server";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_1 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "VNF_R";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf contains_2 {
+      type Base:relatedType { 
+        Base:relationship "contains";
+        Base:relType "CNF";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_0 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "IPPool";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_1 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "Tenant";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_2 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "RPool";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_3 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "User";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf has_4 {
+      type Base:relatedType { 
+        Base:relationship "has";
+        Base:relType "ClusterRole";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

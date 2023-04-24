@@ -1,0 +1,36 @@
+module PhysicalLink {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "PhysicalLink";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "Connection" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "PhysicalLink generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "PhysicalLink Attributes";
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }

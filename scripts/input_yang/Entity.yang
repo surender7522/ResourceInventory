@@ -1,0 +1,236 @@
+module Entity {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "Entity";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "Entity generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "Entity Attributes";
+    leaf id {
+      type string;
+      description "";
+      mandatory  "true";
+    }
+    leaf href {
+      type string;
+      description "";
+      mandatory  "true";
+    }
+    leaf name {
+      type string;
+      description "";
+      mandatory  "true";
+    }
+    leaf displayName {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf gId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf uuid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf originid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf type {
+      type string;
+      description "";
+      mandatory  "true";
+    }
+    leaf baseType {
+      type string;
+      description "";
+      mandatory  "true";
+    }
+    leaf description {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf typeversion {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf status {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf operatationalState {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf administrativeState {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf source {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf creationTime {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf creatorid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf modificationTime {
+      type int64;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf modifierid {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf category {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf vendor {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf domain {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf specificationId {
+      type int64;
+      description "";
+      mandatory  "true";
+    }
+    leaf isDeleted {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf isEntity {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf metaParam {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+   container indexes {
+    leaf href_index {
+      type Base:index {
+        Base:unique "true";
+        Base:indexFields "href";
+      }
+    }
+    leaf gId_index {
+      type Base:index {
+        Base:unique "false";
+        Base:indexFields "gId";
+      }
+    }
+    leaf specificationId_index {
+      type Base:index {
+        Base:unique "false";
+        Base:indexFields "specificationId";
+      }
+    }
+    leaf id_index {
+      type Base:index {
+        Base:unique "true";
+        Base:indexFields "id";
+      }
+    }
+    leaf originid_index {
+      type Base:index {
+        Base:unique "true";
+        Base:indexFields "originid";
+      }
+    }
+    leaf name_index {
+      type Base:index {
+        Base:unique "false";
+        Base:indexFields "name";
+      }
+    }
+    leaf type_index {
+      type Base:index {
+        Base:unique "false";
+        Base:indexFields "type";
+      }
+    }
+    leaf baseType_index {
+      type Base:index {
+        Base:unique "false";
+        Base:indexFields "baseType";
+      }
+    }
+  }
+  }

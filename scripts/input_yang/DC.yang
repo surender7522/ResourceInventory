@@ -1,0 +1,216 @@
+module DC {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "DC";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GeoLocation" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "DC generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "DC Attributes";
+    leaf dcMRing {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcGCRing {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcLRing {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcJapanRing {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcSiteId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcFloors {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcSBlock {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcDNS {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcIpDetail {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    leaf dcId {
+      type string;
+      description "";
+      mandatory  "false";
+      default "";
+    }
+    }
+
+    container relationships {
+    description "Relationship definitions";
+    leaf locates_0 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "Fabric";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_1 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "DCPod";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_2 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "CNF";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_3 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "CNFC";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_4 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "VNF";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_5 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "VNF_R";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_6 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "VNFC_R";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_7 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "Router";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_8 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "WDM";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_9 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "Switch";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_10 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "Server";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf locates_11 {
+      type Base:relatedType { 
+        Base:relationship "locates";
+        Base:relType "RobinCluster";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf connects_0 {
+      type Base:relatedType { 
+        Base:relationship "connects";
+        Base:relType "DC";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf backup_0 {
+      type Base:relatedType { 
+        Base:relationship "backup";
+        Base:relType "DC";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+    leaf parent_0 {
+      type Base:relatedType { 
+        Base:relationship "parent";
+        Base:relType "DC";
+        Base:source "RCP-Base";
+        Base:version "1.0";
+      }
+    }
+
+    }
+  }

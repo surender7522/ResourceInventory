@@ -1,0 +1,36 @@
+module SideCar {
+  
+  namespace "http://rakuten.com/RCP/network";
+
+  prefix "SideCar";
+
+  import Base {
+    prefix "Base";
+  }
+
+  Base:source "RCP-Base";
+  Base:version "1.0";
+
+  Base:baseType "GenericEntity" {
+     Base:source "RCP-Base";
+     Base:version "1.0";
+  }
+
+  organization "Rakuten";
+  contact "";
+  description "SideCar generated from puml";
+
+  revision 2020-08-20 {
+    description "Initial Version";
+    reference "";
+  }
+
+  container attributes {
+    description "SideCar Attributes";
+    }
+
+    container relationships {
+    description "Relationship definitions";
+
+    }
+  }
