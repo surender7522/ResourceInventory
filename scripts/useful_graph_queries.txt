@@ -1,0 +1,23 @@
+MATCH path=(parent)-[:contains|has*1..5]->(child)
+WHERE parent.type = "NetworkSlice" AND parent.id='4a25bc88-9a59-457e-af25-e3af62b7cbbc'
+WITH collect(path) AS paths
+CALL apoc.convert.toTree(
+  paths
+)
+YIELD value
+RETURN value
+
+MATCH path=(parent)-[:contains|has*1..5]->(child)
+WHERE parent.type = "NetworkSlice" AND parent.id='4a25bc88-9a59-457e-af25-e3af62b7cbbc'
+WITH collect(path) AS paths
+CALL apoc.convert.toTree(
+  paths,true, {
+  nodes: {NetworkSliceSubnet: ['type']}
+}
+)
+YIELD value
+RETURN value
+
+MATCH path=(parent)-[:contains|has*1..5]->(child)
+WHERE parent.type = "NetworkSlice" AND parent.id='4a25bc88-9a59-457e-af25-e3af62b7cbbc'
+RETURN parent, child
