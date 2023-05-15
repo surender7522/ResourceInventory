@@ -9,9 +9,10 @@ from starlette_exporter import PrometheusMiddleware, handle_metrics
 from controllers.model_controller import model_router
 from controllers.resource_controller import resource_router
 import logger
-from services.graph_service import hot_constraints
+from services.graph_service import hot_constraints, add_rel
 
 hot_constraints()
+#add_rel("026a58d9-6190-49b8-bd33-6ecdf07359c0", "CNF","fffbbd58-4cbf-4b6a-9b54-ed7678b5196b","CNFC", "containedin")
 
 app = FastAPI(title="Resource Inventory",docs_url=None, redoc_url=None)
 

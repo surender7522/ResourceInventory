@@ -14,6 +14,7 @@ starlette-exporter = "^0.15.1"
 pyang = "^2.5.3"
 xmltodict = "^0.13.0"
 datamodel-code-generator = "^0.18.0"
+httpx = "^0.24.0"
 
 
 [build-system]

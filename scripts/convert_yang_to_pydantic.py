@@ -127,6 +127,7 @@ for f in files:
         with open(f, 'a', encoding='utf-8') as infile:
             infile.write('''
     class Config:
+        allow_population_by_field_name = True
         from pydantic import Extra
         extra = Extra.forbid''')
     except Exception as e:

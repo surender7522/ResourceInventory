@@ -30,4 +30,7 @@ class Resource(BaseModel):
     entityCharacteristics: List[EntityCharacteristics] = []
     entityRelationship: List["EntityRelationship"] = []
 
+    class Config:
+        allow_population_by_field_name = True
+
 EntityRelationship.update_forward_refs()

@@ -5,8 +5,10 @@ from api_models.get_resource import Resource
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from scripts.output_pyd import *
-from services.graph_service import add_node, add_rel, get_node_by_id
+from services.graph_service import add_node, add_rel, get_node_by_id, time_query, get_node
+import json
 model_router = APIRouter()
+
 
 def validator(res:Resource):
     ch={}
@@ -132,37 +134,78 @@ def validator(res:Resource):
     else:
         raise Exception("Not valid type")
 
-@model_router.get("/api/v1/hello")
-async def get_hello():
-    return {"message": "Hello World!"}
+
+def expand(item: dict):
+    enchar=[]
+    for key in item.keys():
+        if key not in ["id", "href", "source","version","baseType","type", "entitySpecificationRef", "name"] :
+            enchar.append({"name": key, "value": item.get(key)})
+    result = Resource(id=item.get("id"), name=item.get("name"), href=item.get("href"), source=item.get("source"), version=item.get("version"),
+                      baseType=item.get("baseType"), type=item.get("type"),entitySpecificationRef=json.loads(item.get("entitySpecificationRef")),
+                      entityCharacteristics=enchar, entityRelationship=[])
+    print(result.dict())
+    return result.dict(by_alias=True)
+
+
+def process_record(records: list):
+    parent={}
+    rels=[]
+    for item in records:
+        print(item.data())
+        if item.data().get("type(r)"):
+            rel=item.data()["type(r)"]
+            item1=item.data()["a"]
+            item2=item.data()["b"]
+            if not parent:
+                parent = expand(item1)
+            rels.append({"rel": rel, "item": expand(item2)})
+        else:
+            parent=expand(item.data()["a"])
+            break
+    for i in rels:
+        parent["entityRelationship"].append({"type": i["rel"], "entity": i["item"]})
+    return parent
+
+
+@model_router.get("/api/v1/hello/{query}")
+async def get_hello(query: str):
+    result = time_query(query)
+    return {"message": str(result)+" ms"}
 
 
 @model_router.get("/api/v1/resource/{id}")
 async def get_resource_id(id: str):
     try:
         records = get_node_by_id(id)
+        print(records)
+        parent=process_record(records)
     except RequestValidationError as e:
         return JSONResponse(content=jsonable_encoder({"detail": e.errors()}), status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
     except Exception as e:
         return JSONResponse(content=jsonable_encoder({"detail": e.__repr__()}), status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
-    return JSONResponse(content=jsonable_encoder({"detail": records}), status_code=status.HTTP_200_OK)
+    return JSONResponse(content=jsonable_encoder(parent), status_code=status.HTTP_200_OK)
 
 
 @model_router.get("/api/v1/resource")
-async def get_resource(fields: str  = None, offset: str  = None, limit: str  = None):
-    return {"message": "Hello World! {0} {1} {2}".format(fields, offset, limit)}
+async def get_resource(fields: str  = None, offset: str  = None, limit: str  = None, depth: str = None, expand: str = None,
+                       relationships: str = None):
+    resp = process_record(get_node(fields, offset, limit, depth, expand, relationships))
+    return JSONResponse(content=jsonable_encoder(resp), status_code=status.HTTP_200_OK)
 
 
-@model_router.post("/api/v1/resource/{id}")
-async def post_resource(id: str, resource: Resource ):
+@model_router.post("/api/v1/resource")
+async def post_resource(resource: Resource):
     try:
+        if resource.id == "" or resource.id == "string":
+            import uuid
+            resource.id=str(uuid.uuid4())
         validator(resource)
         add_node(resource)
     except RequestValidationError as e:
-        return JSONResponse(content=jsonable_encoder({"detail": e.errors()}), status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        return JSONResponse(content=jsonable_encoder({"detail": "entityCharacteristics {}".format(e.errors())}), status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
     except Exception as e:
-        return JSONResponse(content=jsonable_encoder({"detail": e.__repr__()}), status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
-    return {"message": "Hello World! {0} ".format(resource)}
+        return JSONResponse(content=jsonable_encoder({"detail": "entityCharacteristics {}".format(e.__repr__())}), status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
+    return JSONResponse(content=jsonable_encoder(resource), status_code=status.HTTP_200_OK)
 
 
 @model_router.patch("/api/v1/resource/{id}")
