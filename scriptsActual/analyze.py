@@ -1,4 +1,4 @@
-from 3gppnrm import *
+from nrm3gpp import *
 import inspect
 enumlist=[]
 sliceobjlist=[]

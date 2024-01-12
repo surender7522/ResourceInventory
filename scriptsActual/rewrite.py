@@ -1,5 +1,5 @@
 file_path="TS28541_SliceNrm.py"
-output="a.py"
+output="nrm3gpp.py"
 with open(file_path, 'r') as file1, open(output, 'w') as file2:
     count=0
     file2.write("from pydantic import validator, ValidationError\n")
